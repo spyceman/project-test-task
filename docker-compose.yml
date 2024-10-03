@@ -1,0 +1,12 @@
+version: '3'
+services:
+  test-postgres:
+    container_name: test-postgres
+    image: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - /data/postgres
+    env_file:
+      - docker.env
+    restart: always
